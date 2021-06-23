@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="EREntity" representedClassName=".EREntity" parentEntity="ERModel" syncable="YES">
+        <attribute name="imagepath_blurred" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagepath_hr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagepath_lr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagepath_mr" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ERMission" representedClassName=".ERMission" parentEntity="ERModel" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coord_lat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coord_long" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="date_call" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ERProfileMissionEvaluation" inverseName="mission" inverseEntity="ERProfileMissionEvaluation" syncable="YES"/>
+    </entity>
+    <entity name="ERModel" representedClassName=".ERModel" isAbstract="YES" syncable="YES">
+        <attribute name="date_creation" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="EROrganisation" representedClassName=".EROrganisation" parentEntity="EREntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ERProfile" representedClassName=".ERProfile" parentEntity="EREntity" syncable="YES">
+        <attribute name="activated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="date_paused" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ERProfileMissionEvaluation" inverseName="profile" inverseEntity="ERProfileMissionEvaluation" syncable="YES"/>
+    </entity>
+    <entity name="ERProfileMissionEvaluation" representedClassName=".ERProfileMissionEvaluation" parentEntity="ERModel" syncable="YES">
+        <attribute name="date_location_arrived" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="date_notification_received" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="mission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERMission" inverseName="evaluations" inverseEntity="ERMission" syncable="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERProfile" inverseName="evaluations" inverseEntity="ERProfile" syncable="YES"/>
+        <relationship name="report" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERReport" inverseName="evaluation" inverseEntity="ERReport" syncable="YES"/>
+    </entity>
+    <entity name="ERReport" representedClassName=".ERReport" parentEntity="ERModel" syncable="YES">
+        <relationship name="evaluation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ERProfileMissionEvaluation" inverseName="report" inverseEntity="ERProfileMissionEvaluation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EREntity" positionX="9" positionY="135" width="128" height="105"/>
+        <element name="ERMission" positionX="-18" positionY="99" width="128" height="135"/>
+        <element name="ERModel" positionX="-36" positionY="45" width="128" height="60"/>
+        <element name="EROrganisation" positionX="-9" positionY="126" width="128" height="60"/>
+        <element name="ERProfile" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="ERProfileMissionEvaluation" positionX="-27" positionY="90" width="128" height="150"/>
+        <element name="ERReport" positionX="-27" positionY="90" width="128" height="60"/>
+    </elements>
+</model>

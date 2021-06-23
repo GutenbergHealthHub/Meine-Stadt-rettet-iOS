@@ -1,0 +1,6 @@
+framework module Pods_EcoRescueTests {
+  umbrella header "Pods-EcoRescueTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

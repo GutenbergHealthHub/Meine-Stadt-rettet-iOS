@@ -1,0 +1,5 @@
+"NSLocationWhenInUseUsageDescription"="";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="";
+"NSLocationAlwaysUsageDescription"="Για να μπορεί να σας ειδοποιήσει το κέντρο, πρέπει να είναι γνωστή η θέση σας";
+"NSCameraUsageDescription"="Η εφαρμογή First Responder παρέχει τη δυνατότητα να φωτογραφήσετε και να ανεβάσετε τα πιστοποιητικά σας";
+"NSPhotoLibraryUsageDescription"="Η εφαρμογή First Responder παρέχει τη δυνατότητα να φωτογραφήσετε και να ανεβάσετε τα πιστοποιητικά σας";

@@ -1,0 +1,5 @@
+"NSLocationWhenInUseUsageDescription"="";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="";
+"NSLocationAlwaysUsageDescription"="Damit dich die Leitstelle alarmieren kann, muss dein Standort bekannt sein.";
+"NSCameraUsageDescription"="Die First Responder App bietet die Möglichkeit, Zertifikate zu fotografieren und hochzuladen.";
+"NSPhotoLibraryUsageDescription"="Die First Responder App bietet die Möglichkeit, Zertifikate zu fotografieren und hochzuladen.";

@@ -1,0 +1,5 @@
+"NSLocationWhenInUseUsageDescription"="";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="";
+"NSLocationAlwaysUsageDescription"="To alert You, we need to know Your GPS coordinates.";
+"NSCameraUsageDescription"="The first responder app allows the upload of Your qualification/exam.";
+"NSPhotoLibraryUsageDescription"="The first responder app allows the upload of Your qualification/exam.";

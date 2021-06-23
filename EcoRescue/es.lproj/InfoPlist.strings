@@ -1,0 +1,5 @@
+"NSLocationWhenInUseUsageDescription"="Para poder recibir emergencias, necesitamos saber sus coordenadas GPS.";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="Para poder recibir emergencias, necesitamos saber sus coordenadas GPS.";
+"NSLocationAlwaysUsageDescription"="Para poder recibir emergencias, necesitamos saber sus coordenadas GPS.";
+"NSCameraUsageDescription"="La app First Responder permite cargar sus certificados o demostración de cualificación.";
+"NSPhotoLibraryUsageDescription"="La app First Responder permite cargar sus certificados o demostración de cualificación.";
